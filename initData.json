@@ -1,0 +1,118 @@
+[
+    {
+        "name": "All Stars",
+        "price": 120,
+        "rating": 4.9,
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard ",
+        "colors": [
+            {
+                "colorName": "black",
+                "colorCode": "#000",
+                "colorSizes": [
+                    31,
+                    44,
+                    42
+                ],
+                "smallImages": [
+                    "https://imageup.ru/img257/4560128/allstars.png",
+                    "https://imageup.ru/img162/4560135/allstars2.png",
+                    "https://imageup.ru/img113/4560318/allstars3.png",
+                    "https://imageup.ru/img255/4560331/allstars4.png"
+                ],
+                "normalImages": [
+                    "https://imageup.ru/img141/4560129/allstars.png",
+                    "https://imageup.ru/img61/4560138/allstars2.png",
+                    "https://imageup.ru/img23/4560320/allstars3.png",
+                    "https://imageup.ru/img120/4560332/allstars4.png"
+                ]
+            },
+            {
+                "colorName": "red",
+                "colorCode": "#FF0000",
+                "colorSizes": [
+                    41,
+                    42,
+                    43
+                ],
+                "smallImages": [
+                    "https://imageup.ru/img176/4560338/allstars_red1.png",
+                    "https://imageup.ru/img296/4560347/allstars_red2.png",
+                    "https://imageup.ru/img250/4560354/allstars_red3.png",
+                    "https://imageup.ru/img251/4560357/allstars_red4.png"
+                ],
+                "normalImages": [
+                    "https://imageup.ru/img117/4560345/allstars_red1.png",
+                    "https://imageup.ru/img72/4560351/allstars_red2.png",
+                    "https://imageup.ru/img34/4560356/allstars_red3.png",
+                    "https://imageup.ru/img272/4560358/allstars_red4.png"
+                ]
+            },
+            {
+                "colorName": "mint",
+                "colorCode": "#A1D4C9",
+                "colorSizes": [
+                    34,
+                    36,
+                    37
+                ],
+                "smallImages": [
+                    "https://imageup.ru/img124/4560387/allstars_mint1.png",
+                    "https://imageup.ru/img239/4560390/allstars_mint2.png",
+                    "https://imageup.ru/img32/4560392/allstars_mint3.png"
+                ],
+                "normalImages": [
+                    "https://imageup.ru/img273/4560388/allstars_mint1.png",
+                    "https://imageup.ru/img40/4560391/allstars_mint2.png",
+                    "https://imageup.ru/img283/4560394/allstars_mint3.png"
+                ]
+            }
+        ],
+        "brandName": "ALLSTAR",
+        "logo": "https://imageup.ru/img124/4560395/allstarslogo.png"
+    },
+    {
+        "name": "Nike Air Max Air",
+        "price": 100,
+        "rating": 4.8,
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard ",
+        "colors": [
+            {
+                "colorName": "black",
+                "colorCode": "#000",
+                "colorSizes": [
+                    32
+                ],
+                "smallImages": [
+                    "https://imageup.ru/img35/4560522/nike_black1.png",
+                    "https://imageup.ru/img252/4560526/nike_black2.png",
+                    "https://imageup.ru/img32/4560528/nike_black3.png"
+                ],
+                "normalImages": [
+                    "https://imageup.ru/img73/4560524/nike_black1.png",
+                    "https://imageup.ru/img25/4560527/nike_black2.png",
+                    "https://imageup.ru/img44/4560529/nike_black3.png"
+                ]
+            },
+            {
+                "colorName": "white",
+                "colorCode": "#fff",
+                "colorSizes": [
+                    42,
+                    43
+                ],
+                "smallImages": [
+                    "https://imageup.ru/img23/4560530/nike_white1.png",
+                    "https://imageup.ru/img213/4560532/nike_white2.png",
+                    "https://imageup.ru/img104/4560534/nike_white3.png"
+                ],
+                "normalImages": [
+                    "https://imageup.ru/img181/4560531/nike_white1.png",
+                    "https://imageup.ru/img273/4560533/nike_white2.png",
+                    "https://imageup.ru/img138/4560535/nike_white3.png"
+                ]
+            }
+        ],
+        "brandName": "Nike",
+        "logo": "https://imageup.ru/img98/4560536/nikelogo.png"
+    }
+]

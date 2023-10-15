@@ -1,0 +1,67 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Product {
+  id Int @id @default(autoincrement())
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  name        String
+  description String
+  price       Int
+  rating      Float
+
+  reviews Review[]
+  colors  color[]
+
+  brand Brand @relation(fields: [brandName], references: [name])
+
+  purchasesCount Int    @default(0)
+  brandName      String
+}
+
+model color {
+  id Int @id @default(autoincrement())
+
+  colorName    String
+  colorCode    String
+  smallImages  String[]
+  normalImages String[]
+  colorSizes   Int[]
+
+  Product   Product? @relation(fields: [productId], references: [id])
+  productId Int?
+}
+
+model Brand {
+  name    String    @unique
+  Product Product[]
+  logo    String
+}
+
+model Review {
+  id Int @unique
+
+  Product   Product? @relation(fields: [productId], references: [id])
+  productId Int?
+}
+
+model User {
+  id Int @id @default(autoincrement())
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  email    String @unique
+  password String
+
+  name       String
+  avatarPath String @default("/uploads/default-avatar.png")
+}
