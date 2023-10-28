@@ -15,13 +15,21 @@ export class ProductController {
 
   @Get('products')
   async getProducts(@Query() params: ProductParamsDto) {
-    console.log(params);
-
     return await this.productService.getProducts(
       +params.page,
       +params.take,
       params,
     );
+  }
+
+  @Get('colors')
+  async getAllColors() {
+    return await this.productService.getAllColors();
+  }
+
+  @Get('brands')
+  async getAllBrands() {
+    return await this.productService.getAllBrands();
   }
 
   @Get('product')

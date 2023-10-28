@@ -16,8 +16,7 @@ export class ProductService {
     const skip = page && page === 1 ? 0 : (page - 1) * take;
 
     // filtration
-    const { term, sizes, colors, brands, price } =
-      params.filtrationParams || {};
+    let { term, sizes, colors, brands, price } = params.filtrationParams || {};
 
     const filtration: Prisma.ProductFindManyArgs = {};
 
@@ -59,6 +58,8 @@ export class ProductService {
     }
 
     if (sizes) {
+      sizes = sizes.map((value) => +value);
+
       filtration.where = {
         ...filtration.where,
         colors: {
@@ -117,7 +118,11 @@ export class ProductService {
         brand: true,
         colors: true,
       },
-      orderBy,
+      orderBy: Object.keys(orderBy).length
+        ? orderBy
+        : {
+            rating: 'desc',
+          },
       ...filtration,
     });
     const dataCount = await this.prisma.product.count({
@@ -130,7 +135,42 @@ export class ProductService {
     };
   }
 
-  // get product
+  // GET ALL COLORS
+  async getAllColors() {
+    const data = await this.prisma.color.findMany({
+      select: {
+        colorCode: true,
+        colorName: true,
+      },
+    });
+
+    const uniqValues: { colorName: string; colorCode: string }[] = [];
+    data.forEach((item) => {
+      let haveValue = false;
+
+      uniqValues.forEach((uniqItem) => {
+        if (
+          uniqItem.colorName.toLocaleLowerCase() ===
+          item.colorName.toLocaleLowerCase()
+        ) {
+          haveValue = true;
+        }
+      });
+
+      if (haveValue) return;
+
+      uniqValues.push(item);
+    });
+
+    return uniqValues;
+  }
+
+  // GET ALL BRANDS
+  async getAllBrands() {
+    return this.prisma.brand.findMany({});
+  }
+
+  // GET PRODUCT BY ID
   async getProductById(id: number) {
     return this.prisma.product.findUnique({
       where: {
