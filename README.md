@@ -1,8 +1,7 @@
 Перед запуском не забудет поменять в env вашу базу данных DATABASE_URL
 
-для запуска: 
+Запуск:
 
-1)yarn add;
+1) yarn add
 
-2) yarn start;
-
+2) yarn start
